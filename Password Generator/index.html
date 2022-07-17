@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<meta name="og:title" content="Password Generator">
+			<meta name="og:description" content="Generate your custom password using this website">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+			<meta name="theme-color" content="#3498db">
+			<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/9/97/Avast_Passwords_logo.png" type="image/x-icon">
+			<link rel="stylesheet" href="https://rupansamanta.github.io/projects/Password Generator/style.css"></link>
+			<title>Password Generator</title>
+</head>
+<body>
+			<main>
+						<header>Password Generator</header>
+						<section>
+									<div id="password"></div>
+						</section>
+						<section>
+									<div class="headings">
+												Length : <span id="length">8</span>
+									</div>
+									<div class="range">
+												<span>4</span>
+												<input type="range" name="Password Length" id="password-length" value="8" maxlength="32" max="32" min="4">
+												<span>32</span>
+									</div>
+						</section>
+						<section id="settings">
+									<div class="headings">Settings</div>
+									<div>
+												<label>Uppercase
+												<input type="checkbox" name="Uppercase" id="checkbox" checked></label>
+									</div>
+									<div>
+												<label>Lowercase
+												<input type="checkbox" name="Lowercase" id="checkbox" checked></label>
+									</div>
+									<div>		
+												<label>Numbers
+												<input type="checkbox" name="Numbers" id="checkbox" checked></label>
+									</div>
+									<div>
+												<label>Symbols
+												<input type="checkbox" name="Symbols" id="checkbox" checked></label>
+									</div>
+						</section>
+						<section>
+									<button id="button">GENERATE PASSWORD</button>
+						</section>
+			</main>
+			<template>
+						<div class="copied">Copied!</div>
+			</template>
+</body>
+<script src="https://rupansamanta.github.io/projects/Password Generator/script.js"></script>
+</html>
