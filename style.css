@@ -1,1 +1,67 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+:root{
+			--ubuntu: 'Ubuntu', sans-serif;
+			--poppins: 'Poppins', sans-serif;
+			--contSize: 1.1rem;
+			--nunito: 'Nunito', sans-serif;
+}
+*{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+}
+html{
+			font-size: 18px;
+}
+body{
+			margin: 0;
+			background: #000;		
+			background: url("https://images.unsplash.com/photo-1616004675303-ae5657c14af7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhcmslMjB0aGVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1100&q=60");
+			background-size: 100% 100%, cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+}
+header{
+			display: flex;
+			justify-content: flex-start;
+			padding: 20px;
+			font-family: var(--nunito);
+			font-size: 1.5rem;
+			font-weight: 900;
+			color: gainsboro;
+			backdrop-filter: blur(5px);
+}
+section{
+			background: white;
+			padding: 20px;
+			font-family: var(--nunito);
+			font-size: var(--contSize);
+			color: #000;
+			text-align: justify;
+}
+section#title{
+			background: transparent;
+			font-family: var(--ubuntu);
+			font-size: 3.2rem;
+			font-weight: 700;
+			color: gainsboro;
+			padding: 200px 20px 280px 20px;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+}
+section#title p{
+			padding: 0;
+			margin: 0;
+			text-transform: uppercase;
+}
+section#title p:nth-child(3){	
+			color: gainsboro;
+			font-size: 1.5rem;
+			text-transform: none;
+}
+
