@@ -1,73 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+			<meta name="og:title" content="Web Projects">
+			<meta name="og:description" content="All web development projects">
+			<meta name="og:author" content="Rupan Samanta">
+			<meta name="theme-color" content="#000000">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
-			<title>All Projects</title>
+			<script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="https://raw.githubusercontent.com/RupanSamanta/projects/main/style.css"></link>
+			<title>Web Projects</title>
 </head>
-<style>
-					@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
-			body{
-                                                height: 100vh;
-						background: conic-gradient(from 0deg, pink, lightyellow, lightgreen, skyblue, pink);
-                                                background-size: 100% 100%;
-                                                background-repeat: no-repeat;
-                                                overflow-y: scroll;
-                                                margin: 0;
-			}
-			main{
-						padding: 20px 10px;
-			} 
-                        section{
-                                  display: flex;
-                                  justify-content: space-evenly;
-                                  align-items: center;
-                                  flex-wrap: wrap; 
-                        }
-			article{
-						width: 180px;
-						height: 160px;
-						box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
-						border-radius: 10px;
-						display: flex;
-						justify-content: space-evenly;
-						align-items: center;
-						flex-direction: column;
-						margin: 30px auto;
-						text-align: center;
-						border: solid 3px transparent;
-						transition-duration: 0.4s; background: rgba(255, 255, 255, 0.25);
-			}
-			article:hover{
-						background: aliceblue;
-						border-color: #3498db;
-			}
-			article img{
-						width: 100px;
-						height: auto;
-						border-radius: inherit;
-						box-shadow: inset 0 0 10px 1px white;
-			}	
-			a, a:active, a:hover, a:visited{
-						text-decoration: none;
-						outline: none;
-						font-family: 'Outfit', sans-serif;
-						font-size: 16px;
-						color: black;
-			}
-</style>
 <body>
 			<main>
-						<header></header>
-						<section>
-									<article>
-												<img src="https://i.pinimg.com/736x/e9/1f/32/e91f32bd56fc1b09eb2234e0565e046e.jpg" alt="Math Quiz Logo">
-												<a href="https://rupansamanta.github.io/projects/Maths_Quiz/" target="_blank">Maths Quiz</a>
-									</article>
-									<article>
-												<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Avast_Passwords_logo.png" alt="Password Generator Logo">
-												<a href="https://rupansamanta.github.io/projects/Password%20Generator/" target="_blank">Password Generator</a>
-									</article>
+						<header>
+									<div id="head-name">RUPAN</div>
+						</header>
+						<section id="title">
+												<p>Web</p>
+												<p>Projects</p>
+												<p>by Rupan</p>
+						</section>
+						<section id="intro">
+									Here are some of my projects made by me during my session of learning Web Development through various online platforms like W3Schools, Sololearn, Codeliber.
+						</section>
+						<section id="project-list">
+									<figure>
+												<img src="" alt=""></img>
+												<figcaption></figcaption>
+									</figure>
 						</section>
 			</main>
 </body>
+<script>
+			const title = document.getElementById('title');
+			title.style.height = window.innerHeight+'px';
+</script>
 </html>
