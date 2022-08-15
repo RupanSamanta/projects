@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
@@ -7,29 +6,34 @@
 			--poppins: 'Poppins', sans-serif;
 			--contSize: 1.1rem;
 			--nunito: 'Nunito', sans-serif;
+			--footCol: #1c3454;
 }
 *{
 			box-sizing: border-box;
 			padding: 0;
 			margin: 0;
+			font-weight: 500;
 }
 html{
-			font-size: 18px;
+			font-size: 16px;
+			scroll-behavior: smooth;
 }
 body{
 			margin: 0;
 			background: #000;		
-			background: url("https://images.unsplash.com/photo-1616004675303-ae5657c14af7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhcmslMjB0aGVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1100&q=60");
+}
+main{
+			background: url("https://rupansamanta.github.io/projects/assests/img/background.jpeg");
 			background-size: 100% 100%, cover;
 			background-attachment: fixed;
 			background-repeat: no-repeat;
 }
 header{
 			display: flex;
-			justify-content: flex-start;
+			justify-content: space-between;
 			padding: 20px;
 			font-family: var(--nunito);
-			font-size: 1.5rem;
+			font-size: 2rem;
 			font-weight: 900;
 			color: gainsboro;
 			backdrop-filter: blur(5px);
@@ -45,8 +49,7 @@ section{
 section#title{
 			background: transparent;
 			font-family: var(--ubuntu);
-			font-size: 3.2rem;
-			font-weight: 700;
+			font-size: 3.5rem;
 			color: gainsboro;
 			padding: 200px 20px 280px 20px;
 			display: flex;
@@ -57,11 +60,147 @@ section#title{
 section#title p{
 			padding: 0;
 			margin: 0;
-			text-transform: uppercase;
+			text-transform: uppercase;			
+			font-weight: 800;
 }
 section#title p:nth-child(3){	
 			color: gainsboro;
-			font-size: 1.5rem;
+			font-size: 1.8rem;
 			text-transform: none;
 }
-
+#project-list{
+			background: #ebebeb;
+}
+#heading{
+			font-size: 1.5rem;
+			font-family: var(--nunito);
+			font-weight: 700;
+			color: #000;
+}
+article{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 10px 0;
+}
+figure{
+			width: 380px;
+			background: #fff;
+			margin: 10px auto;
+			outline: solid 2px transparent;
+			border: solid 0 goldenrod;
+			border-bottom-width: 5px;
+			color: #000;
+			transition-duration: 0.2s;
+			border-radius: 15px;
+			padding: 0;
+			overflow: hidden;
+			text-align: center;
+}
+figure i{
+			font-size: 2rem;
+}
+figcaption{
+			margin: 40px 0 0 0;
+			padding: 20px 0;
+			font-weight: 600;
+			outline: none;
+}
+figure:active{
+			transform: scale(0.98);
+}
+figure:nth-child(2){
+		 border-color: cornflowerblue;
+}
+/*figure:nth-child(1):active{
+			outline-color: goldenrod;
+}
+figure:nth-child(2):active{
+			outline-color: cornflowerblue;
+}*/
+div#emb-down{
+   all: unset;
+   background: transparent;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			margin: 10px auto 25px auto;
+}
+div#emb-down button{
+			width: auto;
+			min-width: 35px;
+			border: none;
+			background: transparent;
+			color: black;
+			margin: 0 10px 0 0;
+			padding: 5px;
+			border-radius: 10px;
+			transition-duration: 0.15s;
+			font-family: var(--nunito);
+			font-weight: 700;
+}
+div#emb-down button:hover{
+			background: #ebebeb;
+			padding: 5px;
+}
+#emb-down i{
+			font-size: 1.1rem;
+}
+.fa-spinner{
+			color: gold;
+			animation: rot 1.5s infinite linear;
+}
+.fa-check{color: green}
+.fa-xmark{color: red}
+@keyframes rot {
+			0{transform: rotateZ(0deg)}
+			50%{transform: rotateZ(180deg)}
+			100%{transform: rotateZ(360deg)}
+}
+footer {
+			background: transparent;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			flex-direction: column;
+			padding: 20px;
+			font-family: var(--nunito);
+			font-size: 1.8rem;
+			color: gainsboro;
+			backdrop-filter: blur(5px);
+}
+#head-name{
+			width: 100%;
+}
+#contact{
+			font-size: var(--contSize);
+			margin: 20px 0;
+}
+#contact p{
+			font-weight: 800;
+}
+a{
+			margin: 0 10px 0 0;
+			color: lightgrey;
+			text-decoration: none;
+			font-weight: 500;
+			transition-duration: 0.2s;
+}
+a:hover{
+		 color: gainsboro;
+			text-decoration: underline;
+}
+#copyright{
+			font-size: var(--contSize);
+			font-weight: 800;
+}
+#top{
+			display: none;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			margin: 0 10px 10px 0;
+			font-size: 2rem;
+			color: gainsboro;
+			backdrop-filter: blur(5px);
+			border-radius: 50%;
+}
