@@ -11,7 +11,7 @@
 			],
 			links = [
 						'Password Generator',
-						'Maths_Quiz'
+						'Maths Quiz'
 			],
 			projectTitle = [
 						'Random Password Generator',
