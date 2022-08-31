@@ -181,7 +181,7 @@
 						num2 = Math.floor(Math.random()*randomV+50);
 
 						}
-						num2 = 0;
+						//num2 = 0;
 						num1_box.innerHTML = num1;
 
 						num2_box.innerHTML = num2;
