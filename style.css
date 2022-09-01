@@ -108,15 +108,15 @@ figcaption{
 figure:active{
 			transform: scale(0.98);
 }
-figure:nth-child(2){
+figure:nth-child(2n){
 		 border-color: cornflowerblue;
 }
-/*figure:nth-child(1):active{
-			outline-color: goldenrod;
+figure:nth-child(3n){
+		 border-color: green;
 }
-figure:nth-child(2):active{
-			outline-color: cornflowerblue;
-}*/
+figure:nth-child(4n){
+		 border-color: violet;
+}
 div#emb-down{
    all: unset;
    background: transparent;
