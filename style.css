@@ -112,7 +112,7 @@ figure:nth-child(2n){
 		 border-color: cornflowerblue;
 }
 figure:nth-child(3n){
-		 border-color: green;
+		 border-color: red;
 }
 figure:nth-child(4n){
 		 border-color: violet;
