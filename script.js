@@ -7,15 +7,15 @@
 			f = document.getElementsByTagName('footer')[0],
 			embButton, downButton,
 			colors = [
-						'gold', 'skyblue'
+						'gold', 'skyblue', 'aquamarine', 'darkviolet'
 			],
 			links = [
 						'Password Generator',
-						'Maths Quiz'
+						'Maths Quiz', 'Calculator'
 			],
 			projectTitle = [
 						'Random Password Generator',
-						'Simple Maths Quiz'
+						'Simple Maths Quiz', 'Calculator'
 			],
 			fonticons = [
 						'<i class="fa-solid fa-key"></i>',
@@ -54,10 +54,11 @@
 		 				}
 		 	}
 		 	
-			for(let i=0, j=0; i<figcap.length; i++, j++){
+			for(let i=0, j=0; i<figcap.length; i++){
 						figcap[i].style.background = colors[i];
-						if(j == 3)
+						if(j == colors.length-1)
 									j = 0;
+                                                else j++;
 			}
 			
 			for(let i=0; i<anchor.length; i++)
