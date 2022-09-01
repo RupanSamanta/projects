@@ -109,18 +109,22 @@
             if(httpRequest.status == 200) {
                var response = httpRequest.responseText;
                downButton[i].innerHTML = '<i class="fa-solid fa-check"></i>';
-            } else {
-               downButton[i].innerHTML = '<i class="fa-solid fa-xmark"></i>';
-            }
+            
           setTimeout(()=>{
-												downButton[i].innerHTML = '<i class="fa-solid fa-download"></i>';
-									}, 2000);
+				downButton[i].innerHTML = '<i class="fa-solid fa-download"></i>';
+	           }, 2000);
+         } else {
+               downButton[i].innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            setTimeout(()=>{
+				downButton[i].innerHTML = '<i class="fa-solid fa-download"></i>';
+	           }, 2000);
+         }
          } else {
             downButton[i].innerHTML = '<i class="fa-solid fa-spinner"></i>';
             setTimeout(()=>{
-												downButton[i].innerHTML = '<i class="fa-solid fa-download"></i>';
-									}, 2000);
-         }
+				downButton[i].innerHTML = '<i class="fa-solid fa-download"></i>';
+	           }, 2000);
+          }
       }
       httpRequest.open('GET', 'https://rupansamanta.github.io/projects/assests/zips/'+links[i]+'.zip');
       httpRequest.send();
