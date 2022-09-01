@@ -7,23 +7,24 @@
 			f = document.getElementsByTagName('footer')[0],
 			embButton, downButton,
 			colors = [
-						'gold', 'skyblue', 'aquamarine', 'darkviolet'
+						'gold', 'skyblue', 'tomato', 'darkviolet'
 			],
 			links = [
 						'Password Generator',
-						'Maths Quiz', 'Calculator'
+						'Maths Quiz', 'calculator'
 			],
 			projectTitle = [
 						'Random Password Generator',
 						'Simple Maths Quiz', 'Calculator'
 			],
 			fonticons = [
-						'<i class="fa-solid fa-key"></i>',
+					'<i class="fa-solid fa-key"></i>',
 			  		`<i class="fa-solid fa-m"></i>
 			   		<i class="fa-solid fa-a"></i>
-				  		<i class="fa-solid fa-t"></i>
-							<i class="fa-solid fa-h"></i>
-				  		<i class="fa-solid fa-s"></i>`
+				  	<i class="fa-solid fa-t"></i>
+				        <i class="fa-solid fa-h"></i>
+				  	<i class="fa-solid fa-s"></i>`,
+                                        '<i class="fa-solid fa-calculator"></i>'
 			];
 			
 			title.style.height = window.innerHeight+'px';
