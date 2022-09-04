@@ -31,12 +31,16 @@
 									<form>
 									<label id="uploading" for="image"><input type="text" name="urls" id="urls" placeholder="IMAGE URL"><button class="upload-image" type="button">UPLOAD IMAGE</button><input type="file" name="image" id="image" accept="image/*"></label>
 									<label>
-												<span>WIDTH</span><input type="number" name="width" id="img-width" value="620">
+												<span>SIZE
+												<input type="number" name="width" id="img-width" value="620">
+												×
+												<input type="number" name="height" id="img-height" value="620">
+												</span>
+												<span>RATIO
+												<input type="checkbox" name="ratio" id="ratio-check" checked>
+												</span>
 									</label>
-									<label>
-												<span>HEIGHT</span><input type="number" name="height" id="img-height" value="620">
-									</label>
-							                <label>
+							  <label>
 												<span>HOR-POS</span><input type="range" name="horizontal position" id="hori-pos" max="400" min="0" value="0">
 									</label>
 									<label>
