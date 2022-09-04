@@ -28,7 +28,7 @@ imgWidth = document.getElementById('img-width'),
 imgHeight = document.getElementById('img-height'),
 canvas = document.getElementsByTagName('canvas')[0],
 ctx = canvas.getContext('2d'),
-cardURL = 'assests/dls-card/',
+cardURL = 'assests/cards/',
 cards = '', boots = '',
 red = '#e61419', orange = '#f48410',
 yellow = '#eedb10', green = '#10ca08',
@@ -74,7 +74,7 @@ uploadImg.onclick = function ()
 			{
 			      if(confirm('Confirm Download')) download ();
 			}
-                        urls.oninput = function ()
+   urls.oninput = function ()
 			{
 						uplSrc = urls.value;
 						drawCard();
@@ -96,7 +96,8 @@ function drawCard()
 		 			cards = cardURL+'rare.png';
 		 else if(legendary.checked)
 		 			cards = cardURL+'legendary.png';
-	                img.crossOrigin="anonymous"; img.src = cards;
+	  //img.crossOrigin="anonymous"; 
+	  img.src = cards;
 			img.onload = function ()
 			{
 						ctx.drawImage(img, 0, 0, 1280, 890);
@@ -150,8 +151,8 @@ function drawCard()
 		    ctx.fillStyle = black;
 		    ctx.fillText(height.value, 908, 159);
 		    
-		    var bt = new Image(); bt.crossOrigin="anonymous";
-		    bt.src = 'assests/dls-boot/'+boot.value+'.png';		    
+		    var bt = new Image();
+		    bt.src = 'assests/boots/'+boot.value+'.png';		    
 		    bt.onload = function ()
 		    {		
 		    			ctx.drawImage(bt, 1020, 84, 110, 110);
