@@ -7,15 +7,15 @@ country = document.getElementsByClassName('country')[0],
 height = document.getElementById('height'),
 foot = document.getElementsByClassName('foot')[0],
 boot = document.getElementsByClassName('boot-col')[0],
-spe = document.getElementById('speed'),
-acc = document.getElementById('acceleration'),
-sta = document.getElementById('stamina'),
-con = document.getElementById('condition'),
-str = document.getElementById('strength'),
-tac = document.getElementById('tackle'),
-pas = document.getElementById('pass'),
-sho = document.getElementById('shoot'),
-attr = [spe, acc, sta, con, str, tac, pas, sho],
+attr = [document.getElementById('speed'),
+								document.getElementById('acceleration'),
+								document.getElementById('stamina'),
+								document.getElementById('condition'),
+								document.getElementById('strength'),
+								document.getElementById('tackle'),
+					   document.getElementById('pass'),
+					   document.getElementById('shoot'), 
+					 ],
 common = document.getElementById('common'),
 rare = document.getElementById('rare'),
 legendary = document.getElementById('legendary'),
@@ -40,6 +40,7 @@ attrCoord = [[795,292], [1077,292], [795,427], [1077,427], [795,562], [1077,562]
 fGK = ['SPE', 'TAC', 'ACC', 'PAS', 'CON', 'GKH', 'STR', 'GKR'],
 fOT = ['SPE', 'STR', 'ACC', 'TAC', 'STA', 'PAS', 'CON', 'SHO'],
 span = document.querySelectorAll('.stats span'), urls = document.getElementById('urls'),
+ratioCheck = document.getElementById('ratio-check'), wh = 'w',
 horiPos, vertPos, img = new Image(), uplImg = new Image(), 
 uplSrc = 'https://www.futwiz.com/assets/img/fifa21/faces/20801.png';
 urls.value = uplSrc;
@@ -68,11 +69,12 @@ uploadImg.onclick = function ()
 			height.oninput = drawCard;
 			horiBar.onchange = drawCard;
 			vertBar.onchange = drawCard;
-			imgWidth.oninput = drawCard;
-			imgHeight.oninput = drawCard; country.onchange = drawCard;
+			imgWidth.oninput = ()=>{wh = 'w'; drawCard()};
+			imgHeight.oninput = ()=>{wh = 'h'; drawCard()}
+		 country.onchange = drawCard;
 			down.onclick = function ()
 			{
-			      if(confirm('Confirm Download')) download ();
+						if(confirm('Confirm Download')) download ();
 			}
    urls.oninput = function ()
 			{
@@ -101,18 +103,33 @@ function drawCard()
 			img.onload = function ()
 			{
 						ctx.drawImage(img, 0, 0, 1280, 890);
-						uplImg.crossOrigin="anonymous"; uplImg.src = uplSrc;
+						uplImg.crossOrigin="anonymous"; 
+						uplImg.src = uplSrc;
 					 uplImg.onload = function ()
 					 {
+					 			var x = ratio(uplImg.width, uplImg.height, 'w'),
+						    y = ratio(uplImg.width, uplImg.height, 'h');
 					 			horiPos = horiBar.value;
 					 			vertPos = vertBar.value;
-					 			ctx.drawImage(uplImg, horiPos, vertPos, imgWidth.value, imgHeight.value);				 			
-				         }
+					 			if(ratioCheck.checked){
+					 			if(wh == 'w'){
+					 						x = Math.round(imgWidth.value/x);
+					 					 y = y*x;
+					 					 imgHeight.value = y;
+					 			}
+					 			else if (wh == 'h') {
+					 						y = Math.round(imgHeight.value/y);
+					 					 x = y*x;
+					 					 imgWidth.value = x;
+					 			}
+					 			}
+					 			ctx.drawImage(uplImg, horiPos, vertPos, imgWidth.value, imgHeight.value);
+				  }
 				  ctx.textAlign = 'center';		    
 		    ctx.font = '50px Reno';
 		    ctx.fillStyle = grey;
 		    ctx.fillText(firstName.value, 360, 790);		    
-		  	 ctx.textAlign = 'center';
+		  	  ctx.textAlign = 'center';
 					 ctx.font = '70px Reno';
 					 ctx.fillStyle = white;
 		    ctx.fillText(lastName.value, 362, 858);   	
@@ -124,7 +141,7 @@ function drawCard()
 		    
 		    ctx.font = '80px Reno';
 		    ctx.fillStyle = white;
-		    ctx.fillText(rating.value, 615, 151);
+		    ctx.fillText(Math.round(rating.value), 615, 151);
 		    
 		    ctx.fillStyle = posColor();
 		    ctx.fillRect(554, 250, 142, 86);
@@ -149,7 +166,7 @@ function drawCard()
 		    
 		    ctx.font = '62px Reno';
 		    ctx.fillStyle = black;
-		    ctx.fillText(height.value, 908, 159);
+		    ctx.fillText(Math.round(height.value), 908, 159);
 		    
 		    var bt = new Image();
 		    bt.src = 'assests/boots/'+boot.value+'.png';		    
@@ -190,7 +207,7 @@ function writeAttributes()
 {
 			for(let i=0; i<attr.length; i++)
 			{
-						var v = attr[i].value;						
+						var v = Math.round(attr[i].value);						
 						if(v < 60)
 									ctx.fillStyle = red;
 						else if(v >= 60 && v < 70)
@@ -278,3 +295,23 @@ function download()
 }
 
 /* download */
+function ratio(a, b, r)
+{
+			for (;;) {
+				if (a % 2 == 0 && b % 2 == 0) {
+					a /= 2;
+					b /= 2;
+				} else if (a % 3 == 0 && b % 3 == 0) {
+					a /= 3;
+					b /= 3;
+				} else if (a % 5 == 0 && b % 5 == 0) {
+					a /= 5;
+					b /= 5;
+				} else if ((a % 2 != 0 || a % 3 != 0 || a % 5 != 0) || (b % 2 != 0 || b % 3 != 0 || b % 5 != 0)) {
+							if(r == 'w') return(a);
+							else if(r == 'h') return(b);
+							else if(r == 'wh') return(a+':'+b);
+							break;
+				}
+		}
+}
