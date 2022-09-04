@@ -36,6 +36,19 @@ header
 			border-bottom: solid 0.5vw var(--yellow);
 		 box-shadow: 0 0 20px 0.5px var(--yellow);			
 }
+input, select, button
+{
+			width: 40%;
+			height: auto;
+			border: none;
+			outline: none;
+			padding: 0;
+			background: transparent;
+			font-family: Reno;
+			font-weight: 500;
+			color: gainsboro;
+			font-size: 13px;
+}
 .dls-logo
 {
 			width: 40vw;
@@ -111,32 +124,27 @@ label, .stats label, .download
 			font-size: 13px;
 			outline: solid 5px transparent;
 }
-.image-edit{padding: 5px 20px}
-.image-edit label input{width: 90%}
-.image-edit label{width: 100%}
-.image-edit label:nth-child(2), .image-edit label:nth-child(3)
-{
-			width: 40%;
-}
-#img-height, #img-width{width: 40%; text-align: center;}
 label span, .stats label span
 {
 			width: 45%;
 			color: gainsboro;
 }
-input, select, button
+
+.image-edit{padding: 5px 20px}
+.image-edit label input{width: 90%}
+.image-edit label{width: 100%}
+.image-edit label:nth-child(2) span
 {
-			width: 40%;
-			height: auto;
-			border: none;
-			outline: none;
-			padding: 0;
-			background: transparent;
-			font-family: Reno;
-			font-weight: 500;
-			color: gainsboro;
-			font-size: 13px;
+			width: 65%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
 }
+.image-edit label:nth-child(2) span:nth-child(2){width: 30%}
+.image-edit label:nth-child(2) input{width: auto}
+#img-height, #img-width
+{width: 25%; text-align: center;}
+
 #height, #rating{text-align: center}
 select
 {
@@ -221,15 +229,16 @@ select:focus
 {
 			width: 320px;
 			display: block;
-			text-align: center !important;
-			backdrop-filter: blur(5px);
+			text-align: center;
 			padding: 10px 0;
 			margin: 0 auto 15px auto;
+			transition-duration: 0.2s;
 }
 .download:hover
 {
 			background: rgba(255, 231, 50, 0.8);
-                        color: black;
+   color: black;
+   box-shadow: 0 0 5px 1px rgba(255, 231, 50, 0.3);
 }
 canvas
 {
