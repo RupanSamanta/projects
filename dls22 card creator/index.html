@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+    <meta property='og:title' content='DLS 22 Card Creator'>
+    <meta property='og:description' content='Latest DLS 22 version cards with advanced settings'>
+    <meta name="theme-color" content="black">
+    <meta name="author" content="Rupan Samanta">
+    <meta property='og:url' content='https://rupansamanta.github.io/my-projects/DLS/dls22-card-creator.html'>
+		  <link rel="stylesheet" href="style.css"></link>
+						<script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+    <title>DLS 22 Card Creator</title>
+</head>
+<body>
+<div class="loader"></div><div class="loader"></div>
+			<i class="fa-solid fa-futbol" id="loader"></i>
+			<div class="wrapper">
+			<header>
+						<section class="dls-logo"></section>
+						<section class="head-logo">
+									<div>CARD</div>
+									<div>CREATOR</div>
+						</section>
+			</header>
+			<main>
+						<section class="card">
+									<canvas width="1280" height="890"></canvas>
+									<button class="download">DOWNLOAD</button>
+						</section>
+						<section class="image-edit">
+									<form>
+									<label id="uploading" for="image"><input type="text" name="urls" id="urls" placeholder="IMAGE URL"><button class="upload-image" type="button">UPLOAD IMAGE</button><input type="file" name="image" id="image" accept="image/*"></label>
+									<label>
+												<span>WIDTH</span><input type="number" name="width" id="img-width" value="620">
+									</label>
+									<label>
+												<span>HEIGHT</span><input type="number" name="height" id="img-height" value="620">
+									</label>
+							                <label>
+												<span>HOR-POS</span><input type="range" name="horizontal position" id="hori-pos" max="400" min="0" value="0">
+									</label>
+									<label>
+												<span>VER-POS</span><input type="range" name="vertical position" id="vert-pos" max="400" min="0" value="115">
+									</label>
+									</form>
+						</section>
+						<section class="player-info">
+									<form>
+												<label><input type="text" name="name" id="first-name" placeholder="FIRST NAME" value="Cristiano"></label>
+												<label><input type="text" name="name" id="last-name" placeholder="LAST NAME" value="Ronaldo"></label>												
+												<label><span>RATING</span><input type="number" name="rating" id="rating" max="100" min="1" value="98"></label>
+												<label><span>POSITION</span><select class="position"></select></label>
+												<label><span>COUNTRY</span><select class="country"></select></label>
+												<label><span>HEIGHT</span><input type="number" name="height" id="height" max="220" min="50" value="186"></label>
+												<label><span>FOOT</span><select class="foot"></select></label>
+												<label for="color"><span>BOOT</span><select class="boot-col"></select></label>	
+									</form>
+						</section>
+						<section class="stats">
+									<form>
+												<label><span>SPE</span><input type="number" name="speed" id="speed" max="100" min="1" value="98"></label>
+												<label><span>STR</span><input type="number" name="strength" id="strength" max="100" min="1" value="94"></label>
+												<label><span>ACC</span><input type="number" name="acceleration" id="acceleration" max="100" min="1" value="96"></label>
+												<label><span>TAC</span><input type="number" name="tackle" id="tackle" max="100" min="1" value="80"></label>
+												<label><span>STA</span><input type="number" name="stamina" id="stamina" max="100" min="1" value="88"></label>
+												<label><span>PAS</span><input type="number" name="pass" id="pass" max="100" min="1" value="90"></label>
+												<label><span>CON</span><input type="number" name="condition" id="condition" max="100" min="1" value="84"></label>
+												<label><span>SHO</span><input type="number" name="shoot" id="shoot" max="100" min="1" value="92"></label>
+									</form>
+						</section>
+						<section class="card-type">
+									<form>
+												<label>
+															<span>COMMON</span><input type="radio" name="card-type" id="common">
+												</label>
+												<label>
+															<span>RARE</span><input type="radio" name="card-type" id="rare">
+												</label>
+												<label>
+															<span>LEGENDARY</span><input type="radio" name="card-type" id="legendary" checked>
+												</label>
+											 <label>
+															<span>MAX</span><input type="checkbox" name="max" id="max">
+												</label>
+									</form>
+						</section>
+			</main>
+                        <article class="updates">
+						<ul>
+									<li>Cards updated</li>
+									<li>Country list updated</li>
+									<li>New Theme</li>
+						</ul>
+			</article>
+			<footer>
+						<span>Connect & Feedback</span>
+						<div class="social-media">
+									<a href="https://www.facebook.com/rupan.samanta.50" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+									<a href="https://wa.me/qr/UDSMVCEH2MKNB1"><i class="fa-brands fa-whatsapp"></i></a>
+									<a href="mailto: rupansamanta936@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+						</div>
+						©rupan2022
+			</footer>
+</div>
+</body>
+<script>
+			var load1 = document.querySelectorAll('.loader'),
+			load2 = document.querySelector('#loader'),
+			wrap = document.querySelector('.wrapper'),
+			inp = document.querySelectorAll('input[type="range"]');
+			styles = document.createElement('style');
+			
+			document.body.appendChild(styles);
+			
+			updateBack();
+			inp[0].addEventListener('input', updateBack);
+			inp[1].addEventListener('input', updateBack);
+						
+			wrap.style.opacity = 1;
+			wrap.style.display = 'block';
+			load1[0].style.display = 'none';
+			load1[1].style.display = 'none';
+			load2.style.display = 'none';
+			
+		 function updateBack()
+			{
+						styles.textContent = '#hori-pos::-webkit-slider-runnable-track{background-size: '+(inp[0].value/inp[0].max*100)+'% 100%} #vert-pos::-webkit-slider-runnable-track{background-size: '+(inp[1].value/inp[1].max*100)+'% 100%}';
+			}
+</script>
+<script src="script.js"></script>
+<script src="cardDraw.js"></script>
+</html>
