@@ -1,1 +1,3 @@
-VS
+<?php
+echo "vs";
+?>
