@@ -4,4 +4,8 @@
     <td><i class="fa-solid fa-futbol"></i></td>
     <td>I. Gundogan 5’</td>
   </tr>
+  <tr>
+    <td>C. Wilson 39’</td>
+    <td></td><td></td>
+  </tr>
 </table>
