@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td></td>
+    <td>K. Almirón 28’</td>
     <td><i class="fa-solid fa-futbol"></i></td>
     <td>I. Gundogan 5’</td>
   </tr>
