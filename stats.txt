@@ -15,8 +15,3 @@
     <td>B. Silva 64’</td>
   </tr>
 </table>
-<table>
-  <tr>
-    <td></td><td><i class="fa-solid fa-futbol"></i></td><td>J. Stones</td>
-  </tr>
-</table>
