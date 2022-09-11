@@ -8,4 +8,8 @@
     <td>C. Wilson 39’</td>
     <td></td><td></td>
   </tr>
+  <tr>
+    <td>K. Trippier 54’</td>
+    <td></td><td></td>
+  </tr>
 </table>
