@@ -1,18 +1,11 @@
-<!-- <table>
+<table>
   <caption>Goals</caption>
   <tr>
-    <td>K. Almirón 28′</td>
+    <td></td>
     <td>I. Gundogan 5'</td>
   </tr>
-  <tr>
-    <td>C. Wilson 39'</td>
-    <td>E. Haaland 61'</td>
-  </tr>
-  <tr>
-    <td>K. Trippier 54'</td>
-    <td>B. Silva 64'</td>
-  </tr>
 </table>
+<!-- 
 <table>
   <caption>Assists</caption>
   <tr>
