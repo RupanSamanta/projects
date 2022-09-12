@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
   <caption>Goals</caption>
   <tr>
     <td>K. Almirón 28′</td>
@@ -20,3 +20,4 @@
     <td>B. Silva 5'</td>
   </tr>
 </table>
+-->
