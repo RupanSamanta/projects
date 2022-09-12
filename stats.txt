@@ -1,7 +1,7 @@
 <table>
   <caption>Goals</caption>
   <tr>
-    <td></td>
+    <td>M. Almirón 28'</td>
     <td>I. Gundogan 5'</td>
   </tr>
 </table>
@@ -9,7 +9,7 @@
 <table>
   <caption>Assists</caption>
   <tr>
-    <td><!--A. Saint-Maximum 28', 39'--></td>
+    <td> A. Saint-Maximum 28'<!--, 39'--></td>
     <td>B. Silva 5'</td>
   </tr>
 </table>
