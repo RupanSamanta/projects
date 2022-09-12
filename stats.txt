@@ -1,17 +1,22 @@
 <table>
+  <caption>Goals</caption>
   <tr>
     <td>K. Almirón 28′</td>
-    <td><i class="fa-solid fa-futbol"></i></td>
     <td>I. Gundogan 5'</td>
   </tr>
   <tr>
     <td>C. Wilson 39'</td>
-    <td></td>
     <td>E. Haaland 61'</td>
   </tr>
   <tr>
     <td>K. Trippier 54'</td>
-    <td></td>
     <td>B. Silva 64'</td>
+  </tr>
+</table>
+<table>
+  <caption>Assists</caption>
+  <tr>
+    <td>A. Saint-Maximum 28', 39'</td>
+    <td>B. Silva 5'</td>
   </tr>
 </table>
