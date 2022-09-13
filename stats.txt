@@ -5,7 +5,6 @@
     <td>I. Gundogan 5'</td>
   </tr>
 </table>
-<div id="dash"></div>
 <table>
   <caption>Assists</caption>
   <tr>
