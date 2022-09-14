@@ -7,7 +7,7 @@
 			f = document.getElementsByTagName('footer')[0],
 			embButton, downButton,
 			colors = [
-						'gold', 'skyblue', 'tomato', 'darkviolet'
+						'gold', 'skyblue', 'tomato', 'violet'
 			],
 			links = [
 						'Password Generator',
