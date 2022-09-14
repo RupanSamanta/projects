@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
-*{transition-duration: 0.3s;}
+* {
+    transition-duration: 0.3s;
+    outline: none;
+}
 body {
     background: #3a003c;
     margin: 0;
