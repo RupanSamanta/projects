@@ -115,7 +115,7 @@ figure:nth-child(3n){
 		 border-color: red;
 }
 figure:nth-child(4n){
-		 border-color: violet;
+		 border-color: darkviolet;
 }
 div#emb-down{
    all: unset;
