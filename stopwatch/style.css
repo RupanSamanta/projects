@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+*{transition-duration: 0.3s;}
+body {
+    background: #3a003c;
+    margin: 0;
+    font-family: 'Varela', sans-serif;
+}
+header {
+    width: fit-content;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: transparent;
+    background: linear-gradient(45deg, #e90052, hotpink, skyblue, #04f5ff) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+}
+section{
+    padding: 10px;
+    margin: 10px auto;
+}
+section:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div#watch-outer{
+    width: fit-content;
+    height: auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+div#watch-inner{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #3a003c;
+    color: gainsboro;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+div#watch-inner span{
+    max-width: 260px;
+    overflow-x: scroll;
+    margin: 0 auto;
+    font-family: 'Varela', sans-serif;
+}
+div#watch-inner span:nth-child(2){
+    font-size: 40px;
+    transform: translate(20px, -10px);
+}
+div#laps{
+    width: 100%;
+    height: 0;
+    overflow-y: scroll;
+    font-size: 15px;
+    color: gainsboro;
+}
+#laps div{
+    white-space: nowrap;
+    margin: 2px auto;
+    text-align: center;
+    font-family: 'Varela', sans-serif;
+    animation: faded 0.5s 1 ease-in-out;
+}
+#laps #view-lap{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; 
+    text-align: center;
+}
+@keyframes faded {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
+button{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #3a003c;
+    opacity: 0;
+}
+button:nth-child(2){
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+}

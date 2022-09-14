@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Rupan Samanta">
+    <meta name="description" content="Stopwatch - HTML, CSS, JS">
+    <meta name="theme-color" content="#3a003c">
+    <meta name="keywords" content="web development, html, css, js, stopwatch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>Stopwatch</header>
+    <main>
+        <section>
+            <div id="watch-outer">
+                <div id="watch-inner">
+                    <span>00</span>
+                    <span>00</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="laps">
+                <div id="lap"></div>
+                <div id="view-lap"></div>
+            </div>
+        </section>
+        <section>
+            <button>
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <button>
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button>
+                <i class="fa-solid fa-stopwatch"></i>
+            </button>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
