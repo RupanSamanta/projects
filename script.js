@@ -11,11 +11,11 @@
 			],
 			links = [
 						'Password Generator',
-						'Maths Quiz', 'calculator'
+						'Maths Quiz', 'calculator', 'stopwatch'
 			],
 			projectTitle = [
 						'Random Password Generator',
-						'Simple Maths Quiz', 'Calculator'
+						'Simple Maths Quiz', 'Calculator', 'Stopwatch'
 			],
 			fonticons = [
 					'<i class="fa-solid fa-key"></i>',
@@ -24,7 +24,8 @@
 				  	<i class="fa-solid fa-t"></i>
 				        <i class="fa-solid fa-h"></i>
 				  	<i class="fa-solid fa-s"></i>`,
-                                        '<i class="fa-solid fa-calculator"></i>'
+                                        '<i class="fa-solid fa-calculator"></i>', 
+                                        '<i class="fa-solid fa-stopwatch"></i>', 
 			];
 			
 			title.style.height = window.innerHeight+'px';
