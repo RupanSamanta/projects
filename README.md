@@ -1,7 +1,7 @@
 # [Web Projects](https://rupansamanta.github.io/projects/)
 
 A set of websites made by me during my learning session
-* [Password Generator](<https://rupansamanta.github.io/projects/Password Generator>)
+* [Password Generator](<https://rupansamanta.github.io/projects/Password Generator>) ![](<https://rupansamanta.github.io/projects/assests/img/password generator banner.jpg>)
 * [Maths Quiz](<https://rupansamanta.github.io/projects/Maths Quiz>)
 * [Calculator](https://rupansamanta.github.io/projects/calculator)
 * [Stopwatch](https://rupansamanta.github.io/projects/stopwatch)
