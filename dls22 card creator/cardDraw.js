@@ -157,7 +157,7 @@ function drawCard()
 		    cnt.crossOrigin = 'anonymous';
 		    cnt.onload = function ()
 		    {
-		    			ctx.drawImage(cnt,554,356,142, Math.round(142/ratio(cnt.width, cnt.height, 'w'))*ratio(cnt.width, cnt.height, 'h'));
+		    			ctx.drawImage(cnt,554,356,142, Math.round(142/ratio(cnt.width, cnt.height, 'w'))*ratio(cnt.width, cnt.height, 'h')); console.log(Math.round(142/ratio(cnt.width, cnt.height, 'w'))*ratio(cnt.width, cnt.height, 'h'));
 		    }
 		    ctx.textAlign = 'center';
 		    ctx.font = '66px Reno';
