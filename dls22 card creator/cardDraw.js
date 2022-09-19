@@ -157,7 +157,7 @@ function drawCard()
 		    cnt.crossOrigin = 'anonymous';
 		    cnt.onload = function ()
 		    {
-		    			ctx.drawImage(cnt,554,356,142,90)
+		    			ctx.drawImage(cnt,554,356,142, Math.round(142/ratio(cnt.width, cnt.height, 'w'))*ratio(cnt.width, cnt.height, 'h'));
 		    }
 		    ctx.textAlign = 'center';
 		    ctx.font = '66px Reno';
@@ -307,7 +307,10 @@ function ratio(a, b, r)
 				} else if (a % 5 == 0 && b % 5 == 0) {
 					a /= 5;
 					b /= 5;
-				} else if ((a % 2 != 0 || a % 3 != 0 || a % 5 != 0) || (b % 2 != 0 || b % 3 != 0 || b % 5 != 0)) {
+				} else if (a % 7 == 0 && b % 7 == 0) {
+					a /= 5;
+					b /= 5;
+				} else if ((a % 7 != 0 || a % 2 != 0 || a % 3 != 0 || a % 5 != 0) || (b % 7 != 0 || b % 2 != 0 || b % 3 != 0 || b % 5 != 0)) {
 							if(r == 'w') return(a);
 							else if(r == 'h') return(b);
 							else if(r == 'wh') return(a+':'+b);
