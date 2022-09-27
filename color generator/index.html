@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Rupan Samanta">
+    <meta name="description" content="Random Color Generator using HTML, CSS, JS">
+    <meta name="keywords" content="color generator, color picker, html, css, js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+    <meta name="theme-color" content="#f8f8ff">
+    <title>Color Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <span>Color Generator</span>
+        <button id="theme">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+    </header>
+    <main>
+        <section>
+            <div class="pick-color box">
+                <div id="display-color"></div>
+                <div class="roller-box">
+                    <input type="range" value="0" id="roller" max="359" min="0">
+                </div>
+                <label>
+                    <input type="color" id="color-picker" value="#f5f5f0">
+                    <span>Pick Color</span>
+                </label>
+                <label id="generator">
+                    <span>Generate</span>
+                </label>
+            </div>
+            <div class="color-values box">
+                <label for="none">
+                    <span>HEX</span>
+                    <input type="text" name="col-val" id="hex">
+                    <button id="copy">
+                        <i class="fa-regular fa-clone"></i>
+                    </button>
+                </label>
+                <label for="">
+                    <span>RGB</span>
+                    <input type="text" name="col-val" id="rgb">
+                    <button id="copy">
+                        <i class="fa-regular fa-clone"></i>
+                    </button>
+                </label>
+                <label for="">
+                    <span>HSV</span>
+                    <input type="text" name="col-val" id="hsv">
+                    <button id="copy">
+                        <i class="fa-regular fa-clone"></i>
+                    </button>
+                </label>
+                <label for="">
+                    <span>HSL</span>
+                    <input type="text" name="col-val" id="hsl">
+                    <button id="copy">
+                        <i class="fa-regular fa-clone"></i>
+                    </button>
+                </label>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="box" id="shades"></div>
+            <div class="box" id="saturation"></div>
+            <div class="box" id="hue"></div>
+        </section>
+        <hr>
+        <section>
+            <div class="box" id="related-color"></div>
+        </section>
+        <hr>
+        <section>
+            <div class="box" id="css-snippets">
+                <p class="caption">CSS Background</p>
+                <div class="code-block">
+                    <div class="output"></div>
+                    <div class="code">
+                        <div class="buttons" id="bg">
+                            <button>HEX</button>
+                            <button>RGB</button>
+                            <button>HSL</button>
+                        </div>
+                        <button class="code-copy">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                        <pre><span>background: </span><code class="value">#000000</code><span>;</span></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="css-snippets">
+                <p class="caption">CSS Border</p>
+                <div class="code-block">
+                    <div class="output"></div>
+                    <div class="code">
+                        <div class="buttons" id="border">
+                            <button>HEX</button>
+                            <button>RGB</button>
+                            <button>HSL</button>
+                        </div>
+                        <button class="code-copy">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                        <pre><span>border: </span><code class="value">solid 1px #000000</code><span>;</span></pre>
+                    </div>
+                </div>
+            </div>           
+            <div class="box" id="css-snippets">
+                <p class="caption">CSS Color</p>
+                <div class="code-block">
+                    <div class="output">Text Color</div>
+                    <div class="code">
+                        <div class="buttons" id="color">
+                            <button>HEX</button>
+                            <button>RGB</button>
+                            <button>HSL</button>
+                        </div>
+                        <button class="code-copy">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                        <pre><span>color: </span><code class="value">#000000</code><span>;</span></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="css-snippets">
+                <p class="caption">CSS Text Shadow</p>
+                <div class="code-block">
+                    <div class="output">Text Shadow</div>
+                    <div class="code">
+                        <div class="buttons" id="txt-shw">
+                            <button>HEX</button>
+                            <button>RGB</button>
+                            <button>HSL</button>
+                        </div>
+                        <button class="code-copy">
+                            <i class="fa-regular fa-clone"></i>
+                        </button>
+                        <pre><span>text-shadow: </span><code class="value">0 0 5px #00000</code><span>;</span></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button id="go-top">
+            <i class="fa-solid fa-angle-up"></i>
+        </button>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
