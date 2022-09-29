@@ -1,4 +1,4 @@
-country = [
+var country = [
 {
     name: "Afghanistan",
     capital: "Kabul",
