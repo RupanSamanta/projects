@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Rupan Samanta">
+    <meta name="description" content="Country, Flag and Captial Quiz">
+    <meta name="keywords" content="Flag Quiz, Country Quiz, Captial Quiz, Quiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+    <meta name="theme-color" content="darkblue">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+    <title>Flag Quiz</title>
+</head>
+<body>
+    <main>
+        <button id="full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </button>
+        <section id="home">
+            <div id="logo-name">
+                <p class="logo">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <i class="fa-solid fa-earth-europe"></i>
+                    <i class="fa-solid fa-earth-africa"></i>
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <i class="fa-solid fa-earth-oceania"></i>
+                    <i class="fa-solid fa-flag"></i>
+                </p>
+                <p>Flag Quiz</p>
+            </div>
+            <div id="buttons">
+                <button>COUNTRIES</button>
+                <button>FLAGS</button>
+                <button>CAPTIALS</button>
+                <button>CONTINENT</button>
+            </div>
+        </section>
+        <section id="countries" class="play-boxes">
+            <div class="headers">
+                <p>
+                    <button class="arrow-circle-left">
+                        <i class="fa-solid fa-arrow-alt-circle-left"></i>
+                    </button>
+                    Choose the correct flag
+                </p>
+                <p class="stats">
+                    <span class="time">00:00</span>
+                    <span class="life">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                    <span class="turn">1/5</span>
+                </p>
+            </div>
+            <div id="name"></div>
+            <div id="c-flags">
+                <button value=""></button>
+                <button value=""></button>
+                <button value=""></button>
+                <button value=""></button>
+            </div>
+        </section>
+        <section id="flags" class="play-boxes">
+            <div class="headers">
+                <p>
+                    <button class="arrow-circle-left">
+                        <i class="fa-solid fa-arrow-alt-circle-left"></i>
+                    </button>
+                    Choose the correct country
+                </p>
+                <p class="stats">
+                    <span class="time">00:00</span>
+                    <span class="life">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                    <span class="turn">1/5</span>
+                </p>
+            </div>
+            <div id="flag">
+                <img src="">
+            </div>
+            <div id="names">
+                <button value=""></button>
+                <button value=""></button>
+                <button value=""></button>
+                <button value=""></button>
+            </div>
+        </section>
+        <section id="captials" class="play-boxes">
+            <div class="headers">
+                <p>
+                    <button class="arrow-circle-left">
+                        <i class="fa-solid fa-arrow-alt-circle-left"></i>
+                    </button>
+                    Choose the correct capital
+                </p>
+                <p class="stats">
+                    <span class="time">00:00</span>
+                    <span class="life">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                    <span class="turn">1/5</span>
+                </p>
+            </div>
+            <div id="flag-name">
+                <img src="">
+                <p></p>
+            </div>
+            <div id="capital">
+                <button value=""></button>
+                <button value=""></button>
+                <button value=""></button>
+                <button value=""></button>
+            </div>
+        </section>
+    </main>
+    <template id="game-over">
+        <section class="alert-box">
+            <div class="box">
+               <p class="title">Game Over</p>
+               <p><i class="fa-solid fa-flag"></i></p>
+               <table>
+                   <tr>
+                       <td>Level</td>
+                       <td id="level">0</td>
+                   </tr>
+                   <tr>
+                       <td>Turn</td>
+                       <td id="turn">0</td>
+                   </tr>
+                   <tr>
+                       <td>Correct</td>
+                       <td id="correct">0</td>
+                   </tr>
+                   <tr>
+                       <td>Time Taken</td>
+                       <td id="time-taken">0</td>
+                   </tr>
+               </table>
+               <p>
+                   <button class="go-home"><i class="fa-solid fa-bars"></i></button>
+                   <button class="replay"><i class="fa-solid fa-redo-alt"></i></button>
+               </p>
+       </section>
+    </template>
+    <template id="next-level">
+        
+    </template>
+</body>
+<script src="country.js"></script>
+<script src="script.js"></script>
+<script src="functions.js"></script>
+</html>

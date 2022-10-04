@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900;1000&display=swap');
+:root {
+    --color: gainsboro;
+    --font: 'Nunito', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: solid 0 aqua;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, darkblue, cornflowerblue);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    user-select: none;
+    color: var(--color);
+    font-family: var(--font);
+}
+main {
+    height: 100%;
+}
+section {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    transition-duration: 0.25s;
+    animation: effects 0.51s ease 1;
+}
+@keyframes effects {
+    from {opacity: 0; transform: scale(0)}
+    to {opacity: 1; transform: scale(1);}
+}
+.arrow-circle-left {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 2px -10px -10px 10px;
+    font-size: 28px;
+    border-radius: 50%;
+    color: var(--color);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+}
+button#full-screen {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    border: none;
+    outline: none;
+    color: ghostwhite;
+    background: rgba(255, 255, 255, 0.35);
+    font-size: 25px;
+    font-family: var(--font);
+    z-index: 999;
+    transition-duration: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+i.fa-solid, #full-screen {
+    transform: scale(0.8);
+}
+mark {
+    background: black;
+    color: var(--color);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2px;
+    font-family: var(--font);
+}
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+}
+div#logo-name {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: floralwhite;
+    font-weight: 800;
+    padding: 20px;
+}
+p.logo {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-bottom: -10px;
+}
+p.logo:first-child i {
+    font-size: 24px;
+    transition-duration: 0.4s;
+    animation: scale1 4s linear infinite;
+}
+p.logo i:first-child {
+    transform: translate(5px, 65px);
+    animation-name: scale1;
+}
+p.logo i:nth-child(2) {
+    transform: translate(-20px, 15px);
+    animation-name: scale2;
+    animation-delay: 0.35s;
+}
+p.logo i:nth-child(3){
+    transform: translate(0, -10px);
+    animation-name: scale3;
+    animation-delay: 0.7s;
+}
+p.logo i:nth-child(4){
+    transform: translate(20px, 15px);
+    animation-name: scale4;
+    animation-delay: 1.05s;
+}
+p.logo i:nth-child(5){
+    transform: translate(-5px, 65px);
+    animation-name: scale5;
+    animation-delay: 1.40s;
+}
+p.logo i:last-child {
+    font-size: 100px;
+    transform: translate(0, 10px) scale(0.75);
+    animation: none;
+}
+@keyframes scale1 {
+    25% {transform: translate(5px, 65px) scale(0.5)}
+    50% {transform: translate(5px, 65px) scale(1)}
+    75% {transform: translate(5px, 65px) scale(0.5)}
+}
+@keyframes scale2 {
+    25% {transform: translate(-20px, 15px) scale(0.5)}
+    50% {transform: translate(-20px, 15px) scale(1)}
+    75% {transform: translate(-20px, 15px) scale(0.5)}
+}
+@keyframes scale3 {
+    25% {transform: translate(0, -10px) scale(0.5)}
+    50% {transform: translate(0, -10px) scale(1)}
+    75% {transform: translate(0, -10px) scale(0.5)}
+}
+@keyframes scale4 {
+    25% {transform: translate(20px, 15px) scale(0.5)}
+    50% {transform: translate(20px, 15px) scale(1)}
+    75% {transform: translate(20px, 15px) scale(0.5)}
+}
+@keyframes scale5 {
+    25% {transform: translate(-5px, 65px) scale(0.5)}
+    50% {transform: translate(-5px, 65px) scale(1)}
+    75% {transform: translate(-5px, 65px) scale(0.5)}
+}
+div#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div#buttons button {
+    width: calc(50% - 20px);
+    height: 120px;
+    background: transparent;
+    font-size: 20px;
+    margin: 10px auto;
+    color: var(--color);
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: var(--font);
+    transition-duration: 0.2s;
+    animation: fadeDown 0.5s ease-in-out;
+}
+@keyframes fadeDown {
+    from {opacity: 0; transform: scale(0);}
+    to {opacity: 1; transform: scale(1);}
+}
+div#buttons button:active {
+    transform: scale(0.9);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 5px 5px 5px 2px rgba(0, 0, 0, 0.17), inset -5px -5px 5px 2px rgba(255, 255, 255, 0.17);
+}
+.play-boxes {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.headers {
+    width: 100%;
+    color: var(--color);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+}
+p.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px auto 0 auto;
+    font-size: 20px;
+    border-top: dashed 0.5px lightblue;
+    border-bottom: dashed 0.5px lightblue;
+}
+.stats span {
+    width: 30%;
+}
+.stats span:first-child {
+    text-align: left;
+}
+.stats span:last-child {
+    text-align: right;
+}
+div#name, div#flag, div#flag-name{
+    width: 100%;
+    height: 160px;
+    color: var(--color);
+    font-size: 35px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    margin: 20px auto;
+    word-break: break-word;
+}
+div#flag, div#flag-name {
+    height: 200px;
+}
+div#flag-name {
+    height: 220px;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 25px;
+}
+div#flag img, div#flag-name img {
+    width: 300px;
+    height: auto;
+    background: transparent;
+    filter: drop-shadow( 0 0 20px rgba(0, 0, 0, 0.25));
+}
+div#flag-name img {
+    height: 170px;
+    width: auto;
+}
+div#c-flags, div#names, div#capital {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    background: rgba(0, 2, 139, 0.15);
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+}
+div#c-flags button, div#names button, div#capital button {
+    width: 180px;
+    height: 120px;
+    background: transparent;
+    background-size: 100% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border: none;
+    outline: none;
+    margin: 5px auto;
+    transition-duration: 0.15s;
+}
+div#names button, div#capital button {
+    height: 100px;
+    font-size: 20px;
+    color: var(--color);
+    font-family: var(--font);
+    font-weight: 600;
+    margin: 10px 0;
+    background: rgba(0, 2, 139, 0.7);
+}
+div#c-flags button:active, div#names button:active, div#capital button:active {
+    transform: scale(0.92);
+}
+.alert-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    transition-duration: 0.2s;
+    animation: moveon 0.2s ease 1;
+}
+@keyframes moveon {
+    from {transform: translate(-50%, -50%) scale(0)};
+    to {transform: translate(-50%, -50%) scale(1)};
+}
+.alert-box div.box {
+    width: 350px;
+    height: 450px;
+    background: linear-gradient(45deg, rgba(99, 150, 237, 0.5), rgba(173, 211, 230, 0.5), rgba(99, 150, 237, 0.5));
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: 25px;
+    padding: 20px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+p.title {
+    font-size: 32px;
+    font-weight: 800;
+}
+.alert-box div.box table {
+    width: 100%;
+}
+.alert-box div.box table td {
+    width: 60%;
+    padding: 5px 0;
+    font-size: 22px;
+}
+.alert-box div.box table td:nth-child(2) {    
+    text-align: center;
+}
+.alert-box div.box p:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.alert-box div.box p:last-child button{
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    font-size: 25px;
+    color: var(--color);
+}
+.alert-box div.box p:last-child button:active {
+    transform: scale(0.90);
+}
