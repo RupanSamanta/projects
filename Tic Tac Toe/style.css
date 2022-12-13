@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+* {transition: all 0.25s ease}
+body {
+    margin: 0;
+    background: teal;
+    font-family: 'Nunito', sans-serif;
+}
+header {
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 15px 0;
+    color: rgba(0,0,0,0.5);
+}
+section, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0;
+}
+footer {
+    padding: 15px 0;
+}
+#turn {
+    font-size: 20px;
+    transform: translateY(-15px);
+}
+#board {
+    background: rgba(0,0,0,0.15);
+    width: calc(100vw - 120px);
+    height: calc(100vw - 120px);
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition-duration: 1s;
+}
+#board button {
+    background: teal;
+    border: none;
+    outline: none;
+    width: calc(33.3% - 5px);
+    height: calc(33.3% - 5px);
+    color: teal;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    transition-duration: .25s;
+}
+table {
+    width: calc(100vw - 100px);
+    border-collapse: collapse;
+}
+table td, th {
+    font-size: 30px;
+    color: teal;
+    font-weight: 400;
+    text-align: center;
+    border: solid 3px rgba(0,0,0,0.15);
+    padding: 5px 0;
+    color: burlywood;
+}
+table th:nth-child(1), table td:nth-child(1) {
+    color: rgba(0,0,0,0.65);
+}
+table th {
+    font-weight: 700;
+    background: rgba(0,0,0,0.15);
+}
+button#replay {
+    width: calc(100vw - 100px);
+    height: auto;
+    padding: 10px 0;
+    background: rgba(0,0,0,0.15);    
+    color: rgba(0,0,0,0.5);
+    margin: 10px auto;
+    border: solid 3px rgba(0,0,0,0.15);
+    outline: none;
+    box-shadow: 0 5px 5px 5px rgba(255,255,255,0.05);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+button#replay:active {
+    transform: scale(0.95);
+}
+svg {
+    width: calc(100vw - 120px);
+    height: calc(100vw - 120px);
+    position: absolute;
+    display: none;
+}
+svg line { 
+    stroke-dasharray: 1000; 
+    stroke-dashoffset: 1000; 
+    animation: dash 3s linear infinite 0.5s;
+} 
+@keyframes dash {
+    from { stroke-dashoffset: 300; } 
+    to { stroke-dashoffset: 0; }
+}
