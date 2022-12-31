@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <title>Happy New Year 2023</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+body {
+    margin: 0;
+    background: black;
+    font-family: "Righteous", sans-serif;
+}
+#timer {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(hotpink, skyblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    animation: text 10s infinite linear;
+}
+canvas {
+    display: none;
+}
+@keyframes text
+{
+    10%{text-shadow: 0 0 5px purple}
+    20%{text-shadow: 0 0 5px blue}
+    30%{text-shadow: 0 0 5px skyblue}
+    40%{text-shadow: 0 0 5px green}
+    50%{text-shadow: 0 0 5px lime}                        
+    60%{text-shadow: 0 0 5px yellow}
+    70%{text-shadow: 0 0 5px orange}
+    80%{text-shadow: 0 0 5px orangered}
+    90%{text-shadow: 0 0 5px red}
+    100%{text-shadow: 0 0 5px magenta}
+}
+</style>
+<body>
+    <div id="timer"></div>
+    <canvas id="canvas"></canvas>
+</body>
+<script src="https://rupansamanta.github.io/dreamleague.com/assests/fireworks.js"></script>
+<script>
+    var timer = document.getElementById("timer"),
+    count = setInterval(function() {
+        let distance = Math.floor(new Date("1 January 2023, 00:00:00") - new Date()),
+        days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (hours == 0) {
+            if (minutes == 0)
+                timer.innerHTML = seconds + "s";
+            else
+                timer.innerHTML = minutes + "m " + seconds + "s";
+        }
+        else
+            timer.innerHTML = hours +"h " + minutes + "m " + seconds + "s";
+        if (distance <= 0) {
+            clearInterval(count);
+            timer.innerHTML = 'HAPPY NEW YEAR<div style="font-size: 110px; margin-top: -10px">2023</div>';
+            canvas.style.display = "block";
+        }
+    }, 1000);
+</script>
+</html>
