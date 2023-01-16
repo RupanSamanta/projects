@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="author" content="Rupan Samanta">
+   <meta name="description" content="Interest Calculator - Simple and Compound Interest using HTML, CSS, JS">
+   <meta name="keywords" content="HTML, CSS, JavaScript, Web Development">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+   <meta name="theme-color" content="dodgerblue">
+   <title>Interest Calculator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <form>
+      <header>Interest Calculator</header>
+      <hr>
+      <label>
+         <span>Interest Type</span>
+         <select id="interest-type">
+            <option value="si">Simple Interest</option>
+            <option value="ci">Compound Interest</option>
+         </select>
+      </label>
+      <label style="display: none" id="label-compound-frequency">
+         <span>Compund Frequency</span>
+         <select id="compound-frequency">
+            <option value="0.0027397260273972603">Daily</option>
+            <option value="0.019230769230769232">Weekly</option>
+            <option value="0.08333333333333333">Monthly</option>
+            <option value="0.25">Quarterly</option>
+            <option value="0.5">Semi-Annualy</option>
+            <option value="1" selected>Yearly</option>
+         </select>
+      </label>
+      <label>
+         <span>Principal Amount</span>
+         <input type="number" name="Principal Amount" id="principal" value="100">
+      </label>
+      <label>
+         <span>Rate of Interest</span>
+         <input type="number" name="Rate of Interest" id="rate-of-interest" value="5">
+      </label>
+      <label>
+         <span>Period Unit</span>
+         <select id="period-type">
+            <option value="0.0027397260273972603">Days</option>
+            <option value="0.019230769230769232">Weeks</option>
+            <option value="0.08333333333333333">Months</option>
+            <option value="0.25">Quarter</option>
+            <option value="1" selected>Years</option>
+         </select>
+      </label>
+      <label>
+         <span>Period</span>
+         <input type="number" name="Period" id="time-period" value="1">
+      </label>
+      <hr>
+      <label>
+         <span>Interest</span>
+         <input type="number" name="Interest" id="interest" disabled>
+      </label>
+      <label>
+         <span>Amount</span>
+         <input type="number" name="Amount" id="amount" disabled>
+      </label>
+   </form>
+</body>
+<script src="script.js"></script>
+</html>

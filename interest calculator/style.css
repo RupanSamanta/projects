@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+   transition: all 0.4s ease;
+}
+body {
+   background: linear-gradient(to bottom, dodgerblue, purple) no-repeat;
+   background-size: 100% 100%, cover;
+}
+form {
+   width: fit-content;
+   height: auto;
+   border-radius: 0;
+   padding: 15px 20px;
+   margin: 50px auto;
+   border-radius: 5px;
+   box-shadow: 0 10px 30px 10px rgba(0,0,0,0.2);
+   background: rgba(0,0,0,0.3);
+}
+header {
+   padding: 10px;
+   margin: 10px auto;
+   margin-top: 5px;
+   color: gainsboro;
+   font-size: 25px;
+   text-align: center;
+   font-weight: 700;
+}
+label {
+   width: 300px;
+   display: block;
+   margin: 10px auto;
+   padding: 5px 10px;
+}
+span {
+   display: block;
+   font-size: 14px;
+   color: gainsboro;
+   font-weight: 500;
+   margin-bottom: 5px;
+}
+input, select {
+   width: 100%;
+   font-size: 16px;
+   font-weight: 500;
+   color: gainsboro;
+   outline: none;
+   border-radius: 5px;
+   border: solid 1.5px rgba(255,255,255,0.25);
+   background: transparent;
+   padding: 5px;
+}
+hr {
+   background: rgba(0,0,0,0.1);
+   border: solid 1px rgba(0,0,0,0.1);
+   margin: 10px auto;
+}
