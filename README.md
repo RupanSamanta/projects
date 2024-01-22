@@ -10,4 +10,4 @@ A set of websites made by me during my learning session
 * [LinkedIn](https://www.linkedin.com/in/rupan-samanta-2663642ab)
 * [Twitter](https://twitter.com/rvsjan32)
 * [WhatsApp](https://wa.me/qr/UDSMVCEH2MKNB1)
-* [Email](mailto:rupansamanta936@gmail.com)
+* [Email](mailto:rvsjan32@gmail.com)
