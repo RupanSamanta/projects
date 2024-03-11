@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Rupan Samanta">
+    <meta name="description" content="Tic Toe Game using HTML, CSS, JS">
+    <meta name="keywords" content="Web Development, HTML, CSS, JS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+    <meta name="theme-color" content="#232753">
+    <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="type">vs CPU</div>
+        <div id="turn"></div>
+        <div id="reset">Reset</div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="score">
+            <span>Player X</span>
+            <span id="playerX">0</span>
+        </div>
+        <div class="score">
+            <span>Tie</span>
+            <span id="draw">0</span>
+        </div>
+        <div class="score">
+            <span>Player O</span>
+            <span id="playerO">0</span>
+        </div>
+        <div id="status-box"></div>
+    </main>
+    <div id="select-type-player">
+        <div>
+            <span>Play against</span>
+            <form>
+                <label>
+                    <input type="radio" checked name="select-type" id="0">
+                    <span>CPU</span>
+                </label>
+                <label>
+                    <input type="radio" name="select-type" id="1">
+                    <span>Player</span>
+                </label>
+            </form>
+        </div>
+        <div>
+            <span id="start-by">Play as</span>
+            <form>
+                <label>
+                    <input type="radio" checked name="select-player" id="X">
+                    <span class="player-x"></span>
+                </label>
+                <label>
+                    <input type="radio" name="select-player" id="O">
+                    <span class="player-o"></span>
+                </label>
+            </form>
+        </div>
+        <button id="play">Play</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
