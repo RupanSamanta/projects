@@ -1,0 +1,43 @@
+<!-- version 1.0.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sudoku Solver</title>
+    <meta name="description" content="Welcome to our Sudoku Solver! Easily input your puzzle and get instant solutions to even the most challenging grids. Whether you're stuck on a single number or need a full solution, our tool simplifies Sudoku, making it enjoyable for everyone">
+    <meta name="keywords" content="Sudoku solver, online Sudoku, solve Sudoku, Sudoku puzzle, Sudoku solution, Sudoku helper, solve Sudoku instantly, Sudoku tool, free Sudoku solver, Sudoku game solver">
+    <meta name="author" content="Rupan Samanta">
+    <meta name="theme-color" content="#1e1e1e">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="favicon.png" type="image/x-icon"/>
+    <script src="Sudoku.js"></script>
+</head>
+<body>
+   <main>
+      <section>
+         <div class="title">Sudoku Solver</div>
+      </section>
+      <section>
+         <div id="board"></div>
+      </section>
+      <section class="buttons">
+         <div class="buttons__input"></div>
+         <div class="buttons__board">
+            <button id="solve-board">Solve</button>
+            <button id="reset-board">Reset</button>
+         </div>
+      </section>
+   </main>
+   <div id="dialog-box-background">
+      <div class="dialog-box">
+         <div class="message"></div>
+         <div class="box__buttons">
+            <button value="true"></button>
+            <button value="false"></button>
+         </div>
+      </div>
+   </div>
+</body>
+<script src="script.js"></script>
+</html>
