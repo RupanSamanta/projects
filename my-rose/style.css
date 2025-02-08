@@ -331,7 +331,7 @@ html, body {
   animation-delay: 2s;
 }
 
-@-webkit-keyframes $animationName {
+@-webkit-keyframes sparkle {
   50% {
     opacity: 1;
   }
@@ -363,7 +363,7 @@ html, body {
     bottom: 250px;
   }
 }
-@-webkit-keyframes $animationName {
+@-webkit-keyframes openRose2 {
   50% {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -435,7 +435,7 @@ html, body {
     left: -30px;
   }
 }
-@-webkit-keyframes $animationName {
+@-webkit-keyframes openRose3 {
   100% {
     -moz-transform: rotate(60deg);
     -ms-transform: rotate(60deg);
@@ -467,7 +467,7 @@ html, body {
     transform: rotate(60deg);
   }
 }
-@-webkit-keyframes $animationName {
+@-webkit-keyframes openRose4 {
   100% {
     -moz-transform: rotate(-30deg);
     -ms-transform: rotate(-30deg);
@@ -499,7 +499,7 @@ html, body {
     transform: rotate(-30deg);
   }
 }
-@-webkit-keyframes $animationName {
+@-webkit-keyframes openRose5 {
   100% {
     -moz-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
@@ -531,7 +531,7 @@ html, body {
     transform: rotate(30deg);
   }
 }
-@-webkit-keyframes $animationName {
+@-webkit-keyframes glowing {
   50% {
     box-shadow: 0px 0px 60px #f594b8;
   }
