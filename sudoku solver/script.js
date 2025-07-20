@@ -1,7 +1,7 @@
 let activeCell = -1;
 let activeValue = -1;
 let cell;
-let board = [];
+let board;
 const solveButton = document.getElementById('solve-board');
 const resetButton = document.getElementById('reset-board');
 const dialogBoxBg = document.getElementById('dialog-box-background');
@@ -120,6 +120,7 @@ function fillNumber() {
 }
 
 function initialBoard() {
+   board = [];
    for (let i=0; i<9; i++) {
       let rows = [];
       for (let j=0; j<9; j++) {
@@ -172,8 +173,9 @@ function resetBoardIfTrue() {
       cell[i].setAttribute('data-value', board[row][col] = 0);
       cell[i].innerHTML = '';
       cell[i].classList.remove('activeCell');
-      cell[i].style.transform = 'scale(0)';
+      cell[i].style.transform = 'scale(1)';
    });
+   initialBoard();
    closeDialogBox();
 }
 
