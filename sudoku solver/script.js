@@ -5,6 +5,7 @@ let board;
 const solveButton = document.getElementById('solve-board');
 const resetButton = document.getElementById('reset-board');
 const dialogBoxBg = document.getElementById('dialog-box-background');
+const APP_VERSION = '1.0.7';
 
 document.body.onload = function () {
    createBoard();
@@ -15,6 +16,7 @@ document.body.onload = function () {
    initialBoard();
    solveButton.onclick = solveBoard;
    resetButton.onclick = resetBoard;
+   document.getElementById('app-version').innerText = APP_VERSION;
 }
 
 function createBoard() {
