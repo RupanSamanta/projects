@@ -2,21 +2,24 @@ class Sudoku {
    constructor(board) {
       this.board = board;
    }
-   isValid(num, row, col) {
-      for (let i=0; i<9; i++) {
+      isValid(num, row, col) {
+
+      for (let i = 0; i < 9; i++) {
          if (this.board[i][col] == num) {
             return false;
          }
       }
-      for (let i=0; i<9; i++) {
+
+      for (let i = 0; i < 9; i++) {
          if (this.board[row][i] == num) {
             return false;
          }
       }
-      let r = parseInt(row / 3) * 3;
-      let c = parseInt(col / 3) * 3;
-      for (let i=r; i<r+3; i++) {
-         for (let j=c; j<c+3; j++) {
+
+      let startRow = Math.floor(row / 3) * 3;
+      let startCol = Math.floor(col / 3) * 3;
+      for (let i = startRow; i < startRow + 3; i++) {
+         for (let j = startCol; j < startCol + 3; j++) {
             if (this.board[i][j] == num) {
                return false;
             }
