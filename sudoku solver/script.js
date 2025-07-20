@@ -7,18 +7,6 @@ const resetButton = document.getElementById('reset-board');
 const dialogBoxBg = document.getElementById('dialog-box-background');
 const APP_VERSION = '1.0.7';
 
-document.body.onload = function () {
-   createBoard();
-   createButtons();
-   cell = document.querySelectorAll('.cell');
-   activateCell();
-   fillNumber();
-   initialBoard();
-   solveButton.onclick = solveBoard;
-   resetButton.onclick = resetBoard;
-   document.getElementById('app-version').innerText = APP_VERSION;
-}
-
 function createBoard() {
    const board = document.getElementById('board');
    for (let i=0; i<81; i++) {
@@ -219,4 +207,16 @@ function closeDialogBox() {
          dialogBoxBg.style.display = 'none';
       }, 500);
    }, 300);
+}
+
+document.body.onload = function () {
+   createBoard();
+   createButtons();
+   cell = document.querySelectorAll('.cell');
+   activateCell();
+   fillNumber();
+   initialBoard();
+   solveButton.onclick = solveBoard;
+   resetButton.onclick = resetBoard;
+   document.getElementById('app-version').innerText = APP_VERSION;
 }
